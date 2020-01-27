@@ -8,7 +8,7 @@ import { Book } from '../book'
 })
 export class AddBookComponent implements OnInit {
 @Output() addBook: EventEmitter<Book> = new EventEmitter();
-newBook: Book = new Book(1,'','',null,null);
+newBook: Book = new Book(1,'',[""],null,null);
   constructor() { }
 
   ngOnInit() {
@@ -18,7 +18,7 @@ newBook: Book = new Book(1,'','',null,null);
     this.addBook.emit(this.newBook);
     this.newBook.$id = null;
     this.newBook.$title = '';
-    this.newBook.$authors = '';
+    this.newBook.$authors = [""];
     this.newBook.$releaseYear = null;
     this.newBook.$ISBN = null;
   }
