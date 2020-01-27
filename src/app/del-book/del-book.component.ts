@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
 import { Book } from '../book';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-del-book',
@@ -8,15 +9,17 @@ import { Book } from '../book';
 })
 export class DelBookComponent implements OnInit {
   @Output() delBook: EventEmitter<Book> = new EventEmitter();
-  deleBook: Book = new Book(null, '', [], null, null);
-  constructor() { }
+  @Input() books: Book[];
+
+  constructor(private bookService: BookService) { 
+    this.books = bookService.getBooks();
+}
   
   ngOnInit() {
   }
 
-  delNewBook(){
-    this.delBook.emit(this.deleBook);
-    this.deleBook.$id = null;
+  onDelete(option: Book){
+      this.delBook.emit(option);
   }
 
 }
