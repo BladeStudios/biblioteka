@@ -10,9 +10,6 @@ import { BookService } from '../book.service';
 export class DelBookComponent implements OnInit {
   @Output() delBook: EventEmitter<Book> = new EventEmitter();
   @Input() books: Book[];
-  //deleBook: Book = new Book(null, '', [], null, null);
-
-  //books: Array<Book>;
 
   constructor(private bookService: BookService) { 
     this.books = bookService.getBooks();
@@ -21,13 +18,7 @@ export class DelBookComponent implements OnInit {
   ngOnInit() {
   }
 
-  delNewBook(){
-    //this.delBook.emit(this.deleBook);
-    //this.deleBook.$id = null;
-  }
-
   onDelete(option: Book){
-      //this.books.splice(option.$id,1);
       this.delBook.emit(option);
   }
 
