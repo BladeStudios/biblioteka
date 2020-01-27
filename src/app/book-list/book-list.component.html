@@ -2,24 +2,30 @@
 <table>
     <thead>
         <tr>
-            <td>ID</td>
-            <td>Tytuł</td>
-            <td>Autorzy</td>
-            <td>Rok wydania</td>
-            <td>ISBN</td>
+            <td style="width: 5%">ID</td>
+            <td style="width: 35%">Tytuł</td>
+            <td style="width: 35%">Autorzy</td>
+            <td style="width: 10%">Rok wyd.</td>
+            <td style="width: 15%">ISBN</td>
         </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
         <tr *ngFor="let Book of Booklist">
             <td>{{Book.id}}</td>
             <td>{{Book.title}}</td>
             <td>{{Book.authors}}</td>
+=======
+        <tr *ngFor="let item of BookList">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+>>>>>>> df20b3492c64db7afaed86306783a2c2f483c6af
             <td>
                 <ng-container *ngFor="let autor of item.authors">
-                    <span *ngIf="autor!=item.authors[item.authors.length-1]">, </span>
-                    {{autor}}
+                    {{autor}}<span *ngIf="autor!=item.authors[item.authors.length-1]">, </span>
                 </ng-container>
             </td>
+            <td>{{item.releaseYear}}</td>
             <td>{{item.ISBN}}</td>
         </tr>
     </tbody>
