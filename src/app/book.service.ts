@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Book } from './book';
-import { BookList } from './bookList';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ export class BookService {
 
   getBooks() : Book[]{
 
-    return[new Book(1,'title',['aut1','aut2'],2,4)];
+    return[new Book(1,'title',['autor1','autor2'],2020,123456789)];
   }
 
 }

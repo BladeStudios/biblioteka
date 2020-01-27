@@ -20,7 +20,8 @@ export class AppComponent {
     
   }
 
-  delBook(index: number) {
+  delBook(book: Book) {
+    let index = this.BookList.lastIndexOf(book);
     this.BookList.splice(index,1);
   }
 }
