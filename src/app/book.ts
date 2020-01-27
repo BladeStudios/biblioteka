@@ -12,6 +12,7 @@ export class Book{
     public set $title(value: string) {
         this.title = value;
     }
+
     public get $authors(): Array<String> {
         return this.authors;
     }
