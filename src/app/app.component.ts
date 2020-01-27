@@ -17,6 +17,7 @@ export class AppComponent {
 
   addBook(book: Book) {
     this.BookList.push(new Book(book.$id,book.$title,book.$authors,book.$releaseYear,book.$ISBN));
+    
   }
 
   delBook(index: number) {

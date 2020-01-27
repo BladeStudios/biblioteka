@@ -14,12 +14,16 @@ newBook: Book = new Book(null,'',[""],null,null);
 books: Array<Book>;
 //newBook: Book;
 
+
   constructor(private bookService: BookService) { 
       this.books = bookService.getBooks();
   }
 
 
   ngOnInit() {
+    
+
+  
   }
 
   addNewBook(){
