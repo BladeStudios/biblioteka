@@ -19,7 +19,9 @@ export class AppComponent {
     this.BookList.push(new Book(book.$id,book.$title,book.$authors,book.$releaseYear,book.$ISBN));
   }
 
-  delBook(index: number) {
+  delBook(book: Book) {
+    //this.BookList.splice(book.$id-1,1);
+    let index = this.BookList.lastIndexOf(book);
     this.BookList.splice(index,1);
   }
 }

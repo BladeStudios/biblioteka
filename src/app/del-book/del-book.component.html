@@ -1,3 +1,9 @@
-<p>Usun Książkę:</p>
-<label>Podaj id:</label><input type="number" [(ngModel)]="deleBook.id" />
-<button (click)="delNewBook()">Usun</button>
+<h4>Usuwanie Książki</h4>
+
+<form class="form-inline" (ngSubmit)="onDelete(selectedOption)">
+    Książka do usunięcia: 
+    <select [(ngModel)]="selectedOption" name="f">
+        <option *ngFor="let book of books" [ngValue]="book">{{book.id}}. {{book.title}}</option>
+    </select>
+    <button type="submit">Usuń książkę</button>
+    </form>
