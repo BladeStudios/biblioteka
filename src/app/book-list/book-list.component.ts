@@ -9,7 +9,9 @@ import { Book } from '../book'
 })
 export class BookListComponent implements OnInit {
 @Input() BookList: Book[];
-  constructor() { }
+  constructor(private bookService: BookService) { 
+    this.BookList = bookService.getBooks();
+  }
 
   ngOnInit() {
   }

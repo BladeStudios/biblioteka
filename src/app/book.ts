@@ -12,11 +12,11 @@ export class Book{
     public set $title(value: string) {
         this.title = value;
     }
-    public get $authors(): string {
-        return this.authors;
+    public get $authors(): string[] {
+        return this.authors[];
     }
-    public set $authors(value: string) {
-        this.authors = value;
+    public set $authors(value: string[]) {
+        this.authors = value [];
     }
     public get $releaseYear(): number {
         return this.releaseYear;
