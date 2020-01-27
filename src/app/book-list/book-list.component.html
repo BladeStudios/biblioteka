@@ -18,10 +18,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of books">
-            <td>{{item.id}}</td>
-            <td>{{item.title}}</td>
-            <td>{{item.authors}}</td>
+        <tr *ngFor="let Book of Booklist">
+            <td>{{Book.id}}</td>
+            <td>{{Book.title}}</td>
+            <td>{{Book.authors}}</td>
             <td>
                 <ng-container *ngFor="let autor of item.authors">
                     <span *ngIf="autor!=item.authors[item.authors.length-1]">, </span>
