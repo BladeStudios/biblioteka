@@ -9,7 +9,7 @@ import { Book } from '../book'
 })
 export class BookListComponent implements OnInit {
 @Input() BookList: Book[];
-  constructor(private bookService: BookService) { }
+  constructor() { }
 
   ngOnInit() {
   }

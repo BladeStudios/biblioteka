@@ -1,4 +1,6 @@
+import { BookService } from './book.service';
 import { Component } from '@angular/core';
+import { Book } from './book'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Biblioteka';
+  BookList: Array<Book>;
+
+  constructor(private BookService: BookService) {
+    this.BookList = BookService.getBooks();
+  }
+
+  addBook(book: Book) {
+    this.BookList.push(new Book(book.$id,book.$title,book.$authors,book.$releaseYear,book.$ISBN));
+  }
 }

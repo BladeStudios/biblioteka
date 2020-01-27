@@ -1,2 +1,3 @@
 <h1>{{title}}</h1>
-<app-book-list></app-book-list>
+<app-add-book (addBook)="addBook($event)"></app-add-book>
+<app-book-list [BookList]="BookList"></app-book-list>
