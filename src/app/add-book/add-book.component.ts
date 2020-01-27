@@ -24,7 +24,6 @@ newBook: Book = new Book(null,'',[""],null,null);
   addNewBook(){
     this.newBook.$id=this.books[this.books.length-1].$id+1;
     console.log(this.newBook);
-    //this.books.push(this.newBook);
     this.addBook.emit(this.newBook);
     this.newBook.$title='';
     this.newBook.$authors=[];

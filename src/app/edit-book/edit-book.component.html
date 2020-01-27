@@ -1,0 +1,9 @@
+<h4>Edycja Książki</h4>
+
+<form class="form-inline" (ngSubmit)="onDelete(selectedOption)">
+    Książka do edycji: 
+    <select [(ngModel)]="selectedOption" name="f">
+        <option *ngFor="let book of books" [ngValue]="book">{{book.id}}. {{book.title}}</option>
+    </select>
+    <button type="submit">Edytuj książkę</button>
+    </form>
