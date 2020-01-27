@@ -8,7 +8,7 @@ import { Book } from '../book';
 })
 export class DelBookComponent implements OnInit {
   @Output() delBook: EventEmitter<Book> = new EventEmitter();
-  deleBook: Book = new Book(1, '', [], null, null);
+  deleBook: Book = new Book(null, '', [], null, null);
   constructor() { }
   
   ngOnInit() {

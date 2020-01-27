@@ -18,6 +18,7 @@ books: Array<Book>;
       this.books = bookService.getBooks();
   }
 
+
   ngOnInit() {
   }
 
@@ -44,10 +45,11 @@ books: Array<Book>;
     this.newBook.$id = null;
     this.newBook.$id = this.books.length;
     this.newBook.$title = '';
-    this.newBook.$authors = [""];
+    this.newBook.$authors = [ ];
     this.newBook.$releaseYear = null;
     this.newBook.$ISBN = null;*/
 
   }
+ 
 
 }

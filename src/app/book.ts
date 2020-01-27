@@ -35,5 +35,6 @@ export class Book{
     constructor(private id: number, private title: string, private authors: Array<String>, private releaseYear: number, private ISBN: number) {
 
     }
+    
 
 }
