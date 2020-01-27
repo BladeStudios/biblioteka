@@ -6,3 +6,29 @@
         ISBN: {{Book.ISBN}}
     </span>
 </div>
+
+<table border="1" bordercolor="brown">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Tytuł</td>
+            <td>Autorzy</td>
+            <td>Rok wydania</td>
+            <td>ISBN</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of books">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.authors}}</td>
+            <td>
+                <ng-container *ngFor="let autor of item.authors">
+                    <span *ngIf="autor!=item.authors[item.authors.length-1]">, </span>
+                    {{autor}}
+                </ng-container>
+            </td>
+            <td>{{item.ISBN}}</td>
+        </tr>
+    </tbody>
+</table>
