@@ -1,7 +1,9 @@
 <div *ngFor="let Book of BookList">
-    <span>imie: {{Book.name}}
-        nazwisko: {{Book.lastname | uppercase}}
-        wiek: {{Book.old}}
+    <span>id: {{Book.id}}
+        title: {{Book.title | uppercase}}
+        authors: {{Book.authors || uppercase}}
+        years: {{Book.releaseYear}}
+        ISBN: {{Book.ISBN}}
     </span>
 </div>
 
