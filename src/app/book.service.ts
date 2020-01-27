@@ -12,7 +12,7 @@ export class BookService {
 
   getBooks() : Book[]{
 
-    return[new Book(1,'as',['as','as'],2,4)];
+    return[new Book(1,'title',['aut1','aut2'],2,4)];
   }
 
 }

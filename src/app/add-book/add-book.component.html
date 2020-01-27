@@ -1,7 +1,9 @@
-<p>Dodaj Nową Książkę:</p>
-<label>Podaj id:</label><input type="number" [(ngModel)]="newBook.id" />
-<label>Podaj Tytuł:</label><input type="text" [(ngModel)]="newBook.title" />
-<label>Podaj Autora:</label><input type="text" [(ngModel)]="newBook.author" />
-<label>Podaj Rok wydania:</label><input type="number" [(ngModel)]="newBook.year" />
-<label>Podaj numer ISBN </label><input type="number" [(ngModel)]="newBook.ISBN" />
-<button (click)="addNewBook()">Dodaj</button>
+<h4>Dodaj Nową Książkę:</h4>
+<div class="component">
+    <div>Podaj id: <input type="number" [(ngModel)]="newBook.id"/></div>
+    <div>Podaj Tytuł: <input type="text" [(ngModel)]="newBook.title"/></div>
+    <div>Podaj Autora: <input type="text" [(ngModel)]="newBook.author"/></div>
+    <div>Podaj Rok wydania: <input type="number" [(ngModel)]="newBook.year"/></div>
+    <div>Podaj numer ISBN: <input type="number" [(ngModel)]="newBook.ISBN"/></div>
+    <button (click)="addNewBook()">Dodaj</button>
+</div>

@@ -5,12 +5,18 @@ table, td{
 table{
     text-align: center;
     margin: auto;
+    width: 80%;
 }
 
 body{
     font-family: Verdana, Tahoma, sans-serif;
+    text-align: center;
 }
 
 thead{
     font-weight: bold;
+}
+
+.component{
+    text-align: center;
 }
